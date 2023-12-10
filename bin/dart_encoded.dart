@@ -1,5 +1,6 @@
 import 'package:dart_encoded/community.dart';
 import 'package:dart_encoded/demo_constructor.dart';
+import 'package:dart_encoded/my_object.dart';
 import 'package:dart_encoded/tech_community.dart';
 
 void main(List<String> args) {
@@ -48,4 +49,15 @@ void main(List<String> args) {
   obj.printData();
   objA.printData();
   objB.printData();
+
+  /**
+   * Q2: Demo of hashCode and == operator overriden
+   */
+  MyObject firstObject = MyObject(data: ["GDSC", "ITTS"]);
+  MyObject secondObject = MyObject(data: ["GDSC", "ITTS"]);
+  
+  print(firstObject.hashCode);
+  print(secondObject.hashCode);
+
+  print(firstObject == secondObject);
 }
