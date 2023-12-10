@@ -1,4 +1,5 @@
 import 'package:dart_encoded/community.dart';
+import 'package:dart_encoded/demo_constructor.dart';
 import 'package:dart_encoded/tech_community.dart';
 
 void main(List<String> args) {
@@ -36,4 +37,15 @@ void main(List<String> args) {
   pecintaKacang.printAllDivisions();
   print(pecintaKacang.recruitmentStatus);
   pecintaKacang.searchDivision(searchedDivision: "Event");
+
+  /**
+   * Q1: Demo of named constructors
+   */
+  DemoConstructor obj = DemoConstructor("Hello World");
+  DemoConstructor objA = DemoConstructor.namedConstructorA("Hello World");
+  DemoConstructor objB = DemoConstructor.namedConstructorB("Hello World");
+
+  obj.printData();
+  objA.printData();
+  objB.printData();
 }
